@@ -12,7 +12,7 @@ Used CoinCap API for real-time price of the 10 top coins.
 
 Deployed to Netlify.
 
-**#Note** First it was an app focus on the price of only Bitcoin then I added the Top 10 coins. 
+**Note** First it was an app focus on the price of only Bitcoin then I added the Top 10 coins. 
 
 ## Resources:
 
