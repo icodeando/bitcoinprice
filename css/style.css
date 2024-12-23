@@ -3,17 +3,55 @@
 /*******************************************/
 
 /* Box Model Hack */
-*{
+/* *{
   box-sizing: border-box;
-}
+} */
 
 /******************************************
 /* LAYOUT
 /*******************************************/
 
-h2 {
-  color: blue;
+table {
+  width: 75%;
+  margin: 20px auto;
+  border-collapse: collapse;
+  font-family: "Roboto", serif;
+  text-align: left;
 }
+
+th, td {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+}
+
+th {
+  background-color: #f4f4f4;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+
+
+
+
+td {
+  font-size: 14px;
+}
+
+#bitcoin-price, 
+#ethereum-price,
+#tether-price,
+#usdcoin-price,
+#binance-price,
+#xrp-price,
+#cardano-price,
+#solana-price,
+#dogecoin-price {
+  text-align: right;
+  color: #333;
+  font-weight: bold;
+}
+
 /******************************************
 /* ADDITIONAL STYLES
 /*******************************************/

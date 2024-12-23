@@ -10,16 +10,81 @@
 		<!-- external CSS link -->
 	
 		<link rel="stylesheet" href="css/style.css">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 	</head>
 	<body>
 
-		<h1>Bitcoin</h1>
+		<h1></h1>
 		
-		<button type="button" name="button">Get Price</button>
+		<!-- <button type="button" name="button">Get Price</button> -->
 
-		<h2>Price</h2>
+
 		<div class="price"></div>
-		
+
+		<!-- Bitcoin (BTC) [0]
+		Ethereum (ETH) [1]
+		Tether (USDT) [2]
+		USD Coin (USDC) [7]
+		Binance Coin USD (BUSD) [3]
+		XRP (XRP) [4]
+		Cardano (ADA) [9]
+		Solana (SOL) [5]
+		Dogecoin (DOGE) [6] -->
+
+		<table>
+			<tr>
+			  <th>Coin</th>
+			  <th>Price</th>
+			 
+			</tr>
+			<tr>
+			  <td>Bitcoin</td>
+			  <td id="bitcoin-price"></td>
+			 
+			</tr>
+			<tr>
+			  <td>Ethereum</td>
+			  <td id="ethereum-price"></td>
+			 
+			</tr>
+			  <tr>
+				<td>Tether</td>
+				<td id="tether-price"></td>
+			   
+			  </tr>
+			  <tr>
+				<td>USD Coin </td>
+				<td id="usdcoin-price"></td>
+			   
+			  </tr>
+			  <tr>
+				<td>Binance Coin</td>
+				<td id="binance-price"></td>
+			   
+			  </tr>
+			  <tr>
+				<td>XRP</td>
+				<td id="xrp-price"></td>
+			   
+			  </tr>
+			  <tr>
+				<td>Cardano</td>
+				<td id="cardano-price"></td>
+			   
+			  </tr>
+			  <tr>
+				<td>Solana</td>
+				<td id="solana-price"></td>
+			   
+			  </tr>
+			  <tr>
+				<td>Dogecoin</td>
+				<td id="dogecoin-price"></td>
+			
+			  </tr>
+		  </table>
 
 		<script type="text/javascript" src="js/main.js"></script>
 	</body>
