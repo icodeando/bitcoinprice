@@ -1,3 +1,4 @@
+
 // With array
 
 window.onload = function () {
@@ -6,7 +7,30 @@ window.onload = function () {
   fetch(url)
   .then((res) => res.json()) // parse response as JSON
   .then((data) => {
-    const assets = data.data;
+    const coins = data.data;
+
+// without refering to any indexes or pre entering the name of coins (take first 10 elemets of the array)
+
+coins.forEach((coin) => {
+  const { id, priceUsd } = coin; 
+  const priceCoin = document.querySelector(`#${id}`); 
+  if (priceCoin) {
+    priceCoin.innerText = priceUsd
+      ? `${(priceUsd)}`
+      : 'No data'; 
+  }
+});
+})
+.catch((err) => {
+console.error(`Error fetching data: ${err}`);
+});
+};
+
+
+
+
+
+
 
 
   // Bitcoin (BTC) [0]
@@ -21,30 +45,30 @@ window.onload = function () {
 
 
   //Coins array
-  
-  const coins = [
-    { id: 'bitcoin-price', index: 0 },
-    { id: 'ethereum-price', index: 1 },
-    { id: 'tether-price', index: 2 },
-    { id: 'usdcoin-price', index: 7 },
-    { id: 'binance-price', index: 3 },
-    { id: 'xrp-price', index: 4 },
-    { id: 'cardano-price', index: 9 },
-    { id: 'solana-price', index: 5 },
-    { id: 'dogecoin-price', index: 6 },
-  ];
 
-      coins.forEach(({ id, index }) => {
-        const priceCoin = document.querySelector(`#${id}`);
-        if (priceCoin) {
-          priceCoin.innerText = assets[index]?.priceUsd || 'No data';
-        }
-      });
-    })
-    .catch((err) => {
-      console.error(`error ${err}`);
-    });
-};
+//   const coins = [
+//     { id: 'bitcoin-price', index: 0 },
+//     { id: 'ethereum-price', index: 1 },
+//     { id: 'tether-price', index: 2 },
+//     { id: 'usdcoin-price', index: 7 },
+//     { id: 'binance-price', index: 3 },
+//     { id: 'xrp-price', index: 4 },
+//     { id: 'cardano-price', index: 9 },
+//     { id: 'solana-price', index: 5 },
+//     { id: 'dogecoin-price', index: 6 },
+//   ];
+
+//       coins.forEach(({ id, index }) => {
+//         const priceCoin = document.querySelector(`#${id}`);
+//         if (priceCoin) {
+//           priceCoin.innerText = assets[index]?.priceUsd || 'No data';
+//         }
+//       });
+//     })
+//     .catch((err) => {
+//       console.error(`error ${err}`);
+//     });
+// };
 
 
 
