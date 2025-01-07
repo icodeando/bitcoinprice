@@ -7,9 +7,7 @@ window.onload = function () {
   fetch(url)
   .then((res) => res.json()) // parse response as JSON
   .then((data) => {
-    const coins = data.data;
-
-// without refering to any indexes or pre entering the name of coins (take first 10 elemets of the array)
+    const coins = data.data.slice(0, 10);
 
 coins.forEach((coin) => {
   const { id, priceUsd } = coin; 
@@ -25,6 +23,29 @@ coins.forEach((coin) => {
 console.error(`Error fetching data: ${err}`);
 });
 };
+
+
+
+
+
+// without refering to any indexes or pre entering the name of coins (take first 10 elemets of the array)
+
+
+
+// coins.forEach((coin) => {
+//   const { id, priceUsd } = coin; 
+//   const priceCoin = document.querySelector(`#${id}`); 
+//   if (priceCoin) {
+//     priceCoin.innerText = priceUsd
+//       ? `${(priceUsd)}`
+//       : 'No data'; 
+//   }
+// });
+// })
+// .catch((err) => {
+// console.error(`Error fetching data: ${err}`);
+// });
+// };
 
 
 
