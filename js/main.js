@@ -7,7 +7,9 @@ window.onload = function () {
   fetch(url)
   .then((res) => res.json()) // parse response as JSON
   .then((data) => {
+    //takes first 10 coins 
     const coins = data.data.slice(0, 10);
+
 
 coins.forEach((coin) => {
   const { id, priceUsd } = coin; 
@@ -15,55 +17,17 @@ coins.forEach((coin) => {
   if (priceCoin) {
     priceCoin.innerText = priceUsd
       ? `${(priceUsd)}`
+      //if does not find any info
       : 'No data'; 
   }
 });
 })
+
+//if it caches an error 
 .catch((err) => {
-console.error(`Error fetching data: ${err}`);
+console.error(`error ${err}`);
 });
-};
-
-
-
-
-
-// without refering to any indexes or pre entering the name of coins (take first 10 elemets of the array)
-
-
-
-// coins.forEach((coin) => {
-//   const { id, priceUsd } = coin; 
-//   const priceCoin = document.querySelector(`#${id}`); 
-//   if (priceCoin) {
-//     priceCoin.innerText = priceUsd
-//       ? `${(priceUsd)}`
-//       : 'No data'; 
-//   }
-// });
-// })
-// .catch((err) => {
-// console.error(`Error fetching data: ${err}`);
-// });
-// };
-
-
-
-
-
-
-
-
-  // Bitcoin (BTC) [0]
-  // Ethereum (ETH) [1]
-  // Tether (USDT) [2]
-  // USD Coin (USDC) [7]
-  // Binance Coin USD (BUSD) [3]
-  // XRP (XRP) [4]
-  // Cardano (ADA) [9]
-  // Solana (SOL) [5]
-  // Dogecoin (DOGE) [6] 
-
+}; 
 
   //Coins array
 
@@ -90,9 +54,6 @@ console.error(`Error fetching data: ${err}`);
 //       console.error(`error ${err}`);
 //     });
 // };
-
-
-
 
 
 
