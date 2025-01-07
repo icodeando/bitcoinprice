@@ -23,7 +23,7 @@ coins.forEach((coin) => {
 });
 })
 
-//if it caches an error 
+//if it caches an error fetching
 .catch((err) => {
 console.error(`error ${err}`);
 });
